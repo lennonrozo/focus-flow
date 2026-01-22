@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FocusFlow Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>FocusFlow – AI Text Simplifier Demo</h1>
+    <p>Try the simplifier without installing the extension. This demo calls the hosted backend <code>/api/simplify</code>.</p>
+  </header>
+
+  <section class="panel">
+    <label for="backendUrl">Backend API URL</label>
+    <input id="backendUrl" type="url" placeholder="https://focusflow-backend.onrender.com/api" />
+    <small>Tip: Point this to your deployed backend. It must allow CORS.</small>
+  </section>
+
+  <section class="panel">
+    <div class="row">
+      <label for="grade">Grade Level</label>
+      <select id="grade">
+        <option>2</option>
+        <option>3</option>
+        <option selected>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>8</option>
+        <option>10</option>
+        <option>12</option>
+      </select>
+      <button id="saveSettings">Save URL</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <label for="inputText">Input Text</label>
+    <textarea id="inputText" rows="8" placeholder="Paste text here..."></textarea>
+    <div class="actions">
+      <button id="simplifyBtn">Simplify</button>
+      <span id="status" aria-live="polite"></span>
+    </div>
+  </section>
+
+  <section class="panel">
+    <label for="outputText">Output</label>
+    <textarea id="outputText" rows="8" readonly></textarea>
+  </section>
+
+  <footer>
+    <p>
+      Install the full extension from the Chrome Web Store (once published):
+      <a href="https://chromewebstore.google.com/detail/REPLACE_WITH_EXTENSION_ID" target="_blank" rel="noreferrer">Install FocusFlow</a>
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

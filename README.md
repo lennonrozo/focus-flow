@@ -2,6 +2,19 @@
 
 A Chrome browser extension specifically designed for cancer survivors with aphasia and hemineglect. This tool provides 4 powerful accessibility features to make web browsing easier and more comfortable.
 
+## Install
+
+[![Install from Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Install-blue?logo=google-chrome)](https://chromewebstore.google.com/detail/REPLACE_WITH_EXTENSION_ID)
+
+> Note: The link above is a placeholder until the listing is published. Replace `REPLACE_WITH_EXTENSION_ID` with your actual store ID.
+
+## Demo
+
+- Live demo (GitHub Pages): https://REPLACE_USERNAME.github.io/REPLACE_REPO/
+- Short video demo: add a link to your YouTube/Vimeo upload or an embedded GIF here.
+
+The demo page lets you paste text, choose a grade level, and call the hosted backend (`/api/simplify`) to see the AI simplification quality without installing the extension. Configure the backend URL at the top of the page (defaults to an example).
+
 > 📚 **New to this extension?** Check the [Documentation Index](DOCS_INDEX.md) for guides tailored to your needs:
 >
 > - 🚀 [Quick Start](QUICKSTART.md) - 10 minute setup

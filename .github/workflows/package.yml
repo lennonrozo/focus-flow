@@ -1,0 +1,36 @@
+name: Package Chrome Extension
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create dist folder
+        run: |
+          mkdir -p dist
+
+      - name: Zip extension files
+        run: |
+          zip -r dist/focusflow-extension.zip \
+            manifest.json \
+            background.js \
+            content \
+            images \
+            lib \
+            popup \
+            settings \
+            options \
+            -x "**/.DS_Store" "**/*.md" "**/backend/**" "**/dist/**" "**/.git/**"
+
+      - name: Upload packaged ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: chrome-extension-zip
+          path: dist/focusflow-extension.zip
