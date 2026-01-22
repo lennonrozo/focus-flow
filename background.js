@@ -1,7 +1,7 @@
 // Background Service Worker - Manages API calls, caching, and batch processing
 
 // Backend URL - configurable via Options (chrome.storage.sync)
-let BACKEND_URL = 'http://localhost:3000/api';
+let BACKEND_URL = 'https://focusflow-backend-hywd.onrender.com/api';
 
 // Initialize backend URL from storage and watch for changes
 chrome.storage.sync.get({ backendUrl: BACKEND_URL }, ({ backendUrl }) => {

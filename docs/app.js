@@ -1,4 +1,4 @@
-const DEFAULT_URL = 'https://focusflow-backend.onrender.com/api';
+const DEFAULT_URL = 'https://focusflow-backend-hywd.onrender.com/api';
 
 function $(id){return document.getElementById(id)}
 
