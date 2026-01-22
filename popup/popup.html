@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusFlow</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- Main Panel -->
+  <div class="main-panel" id="mainPanel">
+    <div class="header">
+      <img src="chrome-extension://__MSG_@@extension_id__/images/icon-48.png" alt="FocusFlow Logo" class="logo" id="logoImg">
+      <div>
+        <h1>FocusFlow</h1>
+        <p class="subtitle">Stroke Survivor Tool</p>
+      </div>
+    </div>
+    
+    <!-- Feature Toggles -->
+    <div class="features">
+      <label class="feature-item">
+        <input type="checkbox" id="visualShiftToggle">
+        <span>Visual Shift</span>
+      </label>
+      
+      <label class="feature-item">
+        <input type="checkbox" id="highlighterRulerToggle">
+        <span>Highlighter Ruler</span>
+      </label>
+      
+      <label class="feature-item">
+        <input type="checkbox" id="flashingAnchorBarToggle">
+        <span>Flashing Anchor Bar</span>
+      </label>
+      
+      <label class="feature-item">
+        <input type="checkbox" id="textSimplifierToggle">
+        <span>Text Simplifier</span>
+      </label>
+    </div>
+    
+    <!-- Settings Button -->
+    <button class="settings-btn" id="settingsBtn">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M17.43 10.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C12.46 2.18 12.25 2 12 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"/>
+      </svg>
+      Settings
+    </button>
+  </div>
+  
+  <!-- Settings Panel (slides from right) -->
+  <div class="settings-panel" id="settingsPanel">
+    <div class="settings-header">
+      <button class="back-btn" id="backBtn">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+        </svg>
+        Back
+      </button>
+      <h2>Settings</h2>
+    </div>
+    
+    <div class="settings-content">
+      <!-- Visual Shift Settings -->
+      <div class="setting-section">
+        <h3>Visual Shift</h3>
+        <div class="setting-item">
+          <label for="shiftAmount">Shift Amount: <span id="shiftAmountValue">15</span>%</label>
+          <input type="range" id="shiftAmount" min="5" max="30" value="15" class="slider">
+        </div>
+      </div>
+      
+      <!-- Highlighter Ruler Settings -->
+      <div class="setting-section">
+        <h3>Highlighter Ruler</h3>
+        <div class="setting-item">
+          <label for="highlightColor">Highlight Color:</label>
+          <input type="color" id="highlightColor" value="#ffc800">
+        </div>
+        <div class="setting-item">
+          <label for="dimOpacity">Dim Opacity: <span id="dimOpacityValue">70</span>%</label>
+          <input type="range" id="dimOpacity" min="10" max="90" value="70" class="slider">
+        </div>
+      </div>
+      
+      <!-- Flashing Anchor Bar Settings -->
+      <div class="setting-section">
+        <h3>Flashing Anchor Bar</h3>
+        <div class="setting-item">
+          <label for="flashInterval">Flash Interval: <span id="flashIntervalValue">1000</span>ms</label>
+          <input type="range" id="flashInterval" min="500" max="3000" step="100" value="1000" class="slider">
+        </div>
+        <div class="setting-item">
+          <label for="barWidth">Bar Width: <span id="barWidthValue">8</span>px</label>
+          <input type="range" id="barWidth" min="4" max="20" value="8" class="slider">
+        </div>
+      </div>
+      
+      <!-- Text Simplifier Settings -->
+      <div class="setting-section">
+        <h3>Text Simplifier</h3>
+        <div class="setting-item">
+          <label for="readingGrade">Reading Grade Level:</label>
+          <select id="readingGrade" class="grade-select">
+            <option value="2">Grade 2 (Very Simple)</option>
+            <option value="3" selected>Grade 3 (Simple)</option>
+            <option value="4">Grade 4 (Easy)</option>
+            <option value="5">Grade 5 (Moderate)</option>
+            <option value="6">Grade 6 (Standard)</option>
+            <option value="8">Grade 8 (Advanced)</option>
+          </select>
+        </div>
+      </div>
+      
+      <button class="save-btn" id="saveBtn">Save Settings</button>
+      <div class="save-status" id="saveStatus"></div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

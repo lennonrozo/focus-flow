@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FocusFlow Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <h1>FocusFlow Settings</h1>
+
+    <div class="field">
+      <label for="backendUrl">Backend API URL</label>
+      <input id="backendUrl" type="url" placeholder="https://your-backend.example.com/api" />
+      <p class="hint">Example: https://focusflow-backend.onrender.com/api</p>
+    </div>
+
+    <div class="actions">
+      <button id="saveBtn">Save</button>
+      <span id="status" aria-live="polite"></span>
+    </div>
+
+    <hr/>
+    <details>
+      <summary>Advanced</summary>
+      <p>If no URL is set, the extension uses http://localhost:3000/api by default.</p>
+    </details>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
