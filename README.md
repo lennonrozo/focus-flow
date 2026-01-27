@@ -8,10 +8,22 @@ A Chrome browser extension specifically designed for cancer survivors with aphas
 
 > Note: The link above is a placeholder until the listing is published. Replace `REPLACE_WITH_EXTENSION_ID` with your actual store ID.
 
-## Demo
+## 🎬 Demo
 
-- Live demo (GitHub Pages): https://REPLACE_USERNAME.github.io/REPLACE_REPO/
-- Short video demo: add a link to your YouTube/Vimeo upload or an embedded GIF here.
+### Video Walkthrough
+
+<!-- Option 1: Direct GitHub video upload (drag & drop mp4/mov/webm here when editing on GitHub) -->
+<!-- After uploading, GitHub will provide a URL like: https://user-images.githubusercontent.com/... -->
+
+<!-- Option 2: YouTube/Vimeo embed (replace YOUR_VIDEO_ID) -->
+
+[![FocusFlow Demo](https://img.youtube.com/vi/pWMtSIzZAb4/maxresdefault.jpg)](https://youtu.be/pWMtSIzZAb4)
+
+**📺 [Watch Demo Video](https://youtu.be/pWMtSIzZAb4)**
+
+### Live Interactive Demo
+
+Try it without installing: **https://REPLACE_USERNAME.github.io/REPLACE_REPO/**
 
 The demo page lets you paste text, choose a grade level, and call the hosted backend (`/api/simplify`) to see the AI simplification quality without installing the extension. Configure the backend URL at the top of the page (defaults to an example).
 
