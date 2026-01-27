@@ -6,26 +6,15 @@ A Chrome browser extension specifically designed for cancer survivors with aphas
 
 [![Install from Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Install-blue?logo=google-chrome)](https://chromewebstore.google.com/detail/REPLACE_WITH_EXTENSION_ID)
 
-> Note: The link above is a placeholder until the listing is published. Replace `REPLACE_WITH_EXTENSION_ID` with your actual store ID.
+> Note: The link above is a placeholder until the listing is published.
 
 ## 🎬 Demo
 
 ### Video Walkthrough
 
-<!-- Option 1: Direct GitHub video upload (drag & drop mp4/mov/webm here when editing on GitHub) -->
-<!-- After uploading, GitHub will provide a URL like: https://user-images.githubusercontent.com/... -->
-
-<!-- Option 2: YouTube/Vimeo embed (replace YOUR_VIDEO_ID) -->
-
 [![FocusFlow Demo](https://img.youtube.com/vi/pWMtSIzZAb4/maxresdefault.jpg)](https://youtu.be/pWMtSIzZAb4)
 
 **📺 [Watch Demo Video](https://youtu.be/pWMtSIzZAb4)**
-
-### Live Interactive Demo
-
-Try it without installing: **https://REPLACE_USERNAME.github.io/REPLACE_REPO/**
-
-The demo page lets you paste text, choose a grade level, and call the hosted backend (`/api/simplify`) to see the AI simplification quality without installing the extension. Configure the backend URL at the top of the page (defaults to an example).
 
 > 📚 **New to this extension?** Check the [Documentation Index](DOCS_INDEX.md) for guides tailored to your needs:
 >
@@ -164,7 +153,7 @@ You have two options:
 3. **Open `.env` in any text editor** (Notepad, VS Code, etc.)
 4. **Replace `your_gemini_api_key_here` with your actual API key:**
    ```
-   GEMINI_API_KEY=AIzaSyD1234567890abcdefghijklmnop
+   GEMINI_API_KEY=example
    ```
 5. **Save the file**
 
@@ -173,19 +162,19 @@ You have two options:
 **Windows (Command Prompt):**
 
 ```bash
-set GEMINI_API_KEY=AIzaSyD1234567890abcdefghijklmnop
+set GEMINI_API_KEY=example
 ```
 
 **Windows (PowerShell):**
 
 ```bash
-$env:GEMINI_API_KEY="AIzaSyD1234567890abcdefghijklmnop"
+$env:GEMINI_API_KEY="example"
 ```
 
 **Mac/Linux:**
 
 ```bash
-export GEMINI_API_KEY=AIzaSyD1234567890abcdefghijklmnop
+export GEMINI_API_KEY=example
 ```
 
 > ⚠️ **Note**: This option requires setting the key every time you open a new terminal.
